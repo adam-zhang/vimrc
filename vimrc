@@ -112,7 +112,7 @@ packadd matchit
 set rnu
 set nu
 
-colorscheme evening
+colorscheme desert
 
 set nocompatible              " be iMproved, required
 filetype off                  " required

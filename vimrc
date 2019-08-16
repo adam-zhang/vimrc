@@ -134,9 +134,9 @@ map <F3> :call FormatCode()<CR>
 func! FormatCode()
 	exec "w"
 	if &filetype == 'C' || &filetype == 'h'
-		exec "!astyle --style=bsd %"
+		exec "!astyle --style=bsd --indent=spaces=8 %"
 	elseif &filetype == 'cpp'
-		exec "!astyle --style=bsd %"        
+		exec "!astyle --style=bsd --indent=spaces=8 %"        
 		return
 	endif
 endfunc

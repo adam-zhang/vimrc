@@ -117,6 +117,16 @@ colorscheme desert
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+"coding 
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+
+"English menu
+so $VIMRUNTIME/delmenu.vim
+set langmenu=none
+so $VIMRUNTIME/menu.vim
+
 set tags+=~/.tags/tags 
 set tags+=tags
 set autochdir
@@ -220,3 +230,7 @@ filetype plugin indent on    " required
 "let g:ycm_enable_diagnostic_signs = 0
 "let g:ycm_enable_diagnostic_highlighting = 0
 "let g:ycm_echo_current_diagnostic = 0
+"
+"ctags
+
+

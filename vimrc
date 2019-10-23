@@ -10,9 +10,12 @@
 "	    for OpenVMS:  sys$login:.vimrc
 
 " When started as "evim", evim.vim will already have done these settings.
+set fileformat=unix
+
 if v:progname =~? "evim"
   finish
 endif
+
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -275,3 +278,4 @@ nnoremap <C-F11> :call ToggleWindowSize(0)<CR>
 imap <F11> <C-O><F11>
 imap <S-F11> <C-O><S-F11>
 imap <C-F11> <C-O><C-F11>
+

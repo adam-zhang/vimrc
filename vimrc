@@ -50,63 +50,34 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
-set rnu
-set nu
-set nocompatible              " be iMproved, required
+set nocompatible              " required
 filetype off                  " required
-
+ 
+"set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'https://github.com/vim-scripts/a.vim'
-Plugin 'https://github.com/jiangmiao/auto-pairs'
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Add all your plugins here (note older versions of Vundle used Bundle
+Plugin 'adam-zhang/a.vim'
+Plugin 'adam-zhang/auto-pairs'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'iamcco/mathjax-support-for-mkdp'
 Plugin 'https://github.com/iamcco/markdown-preview.vim'
-call vundle#end()
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
+set rnu
+set nu
 
+colorscheme desert
 
-
-
-
-
-
-
-
-
-let g:mkdp_path_to_chrome = "chrome"
-    " Path to the chrome or the command to open chrome (or other modern browsers).
-    " If set, g:mkdp_browserfunc would be ignored.
-
-    let g:mkdp_browserfunc = 'MKDP_browserfunc_default'
-    " Callback Vim function to open browser, the only parameter is the url to open.
-
-    let g:mkdp_auto_start = 0
-    " Set to 1, Vim will open the preview window on entering the Markdown
-    " buffer.
-
-    let g:mkdp_auto_open = 0
-    " Set to 1, Vim will automatically open the preview window when you edit a
-    " Markdown file.
-
-    let g:mkdp_auto_close = 1
-    " Set to 1, Vim will automatically close the current preview window when
-    " switching from one Markdown buffer to another.
-
-    let g:mkdp_refresh_slow = 0
-    " Set to 1, Vim will just refresh Markdown when saving the buffer or
-    " leaving from insert mode. With default 0, it will automatically refresh
-    " Markdown as you edit or move the cursor.
-
-    let g:mkdp_command_for_global = 0
-    " Set to 1, the MarkdownPreview command can be used for all files,
-    " by default it can only be used in Markdown files.
-
-    let g:mkdp_open_to_the_world = 0
-    " Set to 1, the preview server will be available to others in your network.
-    " By default, the server only listens on localhost (127.0.0.1).
-"
-"
 set tags+=~/.tags/tags
 set tags+=tags
 
@@ -116,6 +87,4 @@ autocmd InsertLeave * :silent !fcitx-remote -c
 autocmd BufCreate *  :silent !fcitx-remote -c
 autocmd BufEnter *  :silent !fcitx-remote -c
 autocmd BufLeave *  :silent !fcitx-remote -c
-
-
 

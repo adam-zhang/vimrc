@@ -107,3 +107,15 @@ let g:mkdp_path_to_chrome = "chrome"
     " By default, the server only listens on localhost (127.0.0.1).
 "
 "
+set tags+=~/.tags/tags
+set tags+=tags
+
+set path=.,/usr/include/**,/usr/local/include/**,/usr/local/Qt-5.5.1/include/**
+
+autocmd InsertLeave * :silent !fcitx-remote -c
+autocmd BufCreate *  :silent !fcitx-remote -c
+autocmd BufEnter *  :silent !fcitx-remote -c
+autocmd BufLeave *  :silent !fcitx-remote -c
+
+
+

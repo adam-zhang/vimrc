@@ -66,6 +66,7 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle
 Plugin 'adam-zhang/a.vim'
 Plugin 'adam-zhang/auto-pairs'
+Plugin 'vim-scripts/fcitx.vim'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'iamcco/mathjax-support-for-mkdp'
 Plugin 'https://github.com/iamcco/markdown-preview.vim'

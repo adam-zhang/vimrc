@@ -70,6 +70,7 @@ Plugin 'vim-scripts/fcitx.vim'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'iamcco/mathjax-support-for-mkdp'
 Plugin 'https://github.com/iamcco/markdown-preview.vim'
+Plugin 'fedorenchik/qt-support.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

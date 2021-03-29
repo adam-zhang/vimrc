@@ -82,6 +82,7 @@ colorscheme desert
 
 set tags+=~/.tags/tags
 set tags+=tags
+set complete-=t
 
 set path=.,/usr/include/**,/usr/local/include/**,/usr/local/Qt-5.5.1/include/**
 

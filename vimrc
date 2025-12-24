@@ -55,6 +55,8 @@ filetype off                  " required
  
 filetype plugin indent on    " required
 
+set switchbuf=useopen,usetab,newtab
+cnoreabbrev tabe tab drop
 set rnu
 set nu
 

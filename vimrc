@@ -53,30 +53,6 @@ endif
 set nocompatible              " required
 filetype off                  " required
  
-"set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" Add all your plugins here (note older versions of Vundle used Bundle
-Plugin 'adam-zhang/a.vim'
-Plugin 'adam-zhang/auto-pairs'
-Plugin 'adam-zhang/plantuml-previewer.vim'
-Plugin 'adam-zhang/open-browser.vim'
-Plugin 'adam-zhang/plantuml-syntax'
-Plugin 'vim-scripts/fcitx.vim'
-Plugin 'vim-scripts/cscope.vim'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'iamcco/mathjax-support-for-mkdp'
-Plugin 'https://github.com/iamcco/markdown-preview.vim'
-Plugin 'fedorenchik/qt-support.vim'
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 set rnu
@@ -90,4 +66,13 @@ set complete-=t
 
 set path=.,/usr/include/**,/usr/local/include/**,/usr/local/Qt-5.5.1/include/**
 
+set makeprg=cmake\ -B\ build\ &&\ cmake\ --build\ build\ -j${nproc}
 
+" 指定插件安装目录
+call plug#begin('~/.vim/plugged')
+
+" 在这里添加插件列表
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" 初始化插件系统
+call plug#end()

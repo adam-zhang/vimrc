@@ -75,6 +75,6 @@ call plug#begin('~/.vim/plugged')
 
 " 在这里添加插件列表
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plug 'vim-scripts/a.vim'
 " 初始化插件系统
 call plug#end()
